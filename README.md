@@ -11,3 +11,14 @@ the source to the destination
 
 The find_neighbours function calculates the neighbours of each cell of the grid
 
+The AStar function initializes the open list with the starting node and an empty closed list.
+It iterates until the destination is reached.
+In each iteration:
+It selects the node from the open list with the lowest f value.
+Removes the selected node from the open list and adds it to the closed list.
+If the selected node is the destination node, the function reconstructs the path using the parents array and returns it.
+Otherwise, it expands the selected node by considering its neighbors, updating their costs (g) and f values if necessary, and adding them to the open list if they are not there already.
+
+Once the AStar function completes its implementation,the parents array is looked into to reconstruct the path
+
+The main function involves setting the start and the end nodes, the nodes which have obstacles(initialised with -1) and calling the AStar function.
